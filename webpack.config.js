@@ -54,6 +54,7 @@ module.exports = {
   },
   devServer: {
     contentBase: false,
+    clientLogLevel: 'none',
     historyApiFallback: true,
     host: '0.0.0.0',
     noInfo: true,
