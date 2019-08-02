@@ -9,6 +9,9 @@ const theme = {
   color8: '#66BB6A',
   color9: '#2E7D32',
   color10: '#EF5350',
-  color11: '#C62828'
+  color11: '#C62828',
+  padding1: '10px',
+  padding2: '5px',
+  padding3: '2px'
 };
 export default theme;
