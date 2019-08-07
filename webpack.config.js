@@ -31,6 +31,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.mjs$/,
+        type: 'javascript/auto'
+      },
+      {
         test: /\.(js|jsx)$/,
         use: ['babel-loader'],
         exclude: /node_modules/
