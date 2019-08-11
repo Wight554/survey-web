@@ -18,7 +18,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'React Boilerplate',
+      title: 'survey-web',
       inject: true,
       favicon: './src/favicon.png',
       template: './src/index.ejs'
@@ -30,6 +30,10 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.mjs$/,
+        type: 'javascript/auto'
+      },
       {
         test: /\.(js|jsx)$/,
         use: ['babel-loader'],
@@ -54,6 +58,7 @@ module.exports = {
   },
   devServer: {
     contentBase: false,
+    clientLogLevel: 'none',
     historyApiFallback: true,
     host: '0.0.0.0',
     noInfo: true,
