@@ -15,6 +15,9 @@ const GlobalStyle = createGlobalStyle`
 		font-style: normal;
 		src: url('${RobotoCondensedBold}') format('truetype')
   }
+	*{
+		box-sizing: border-box;
+	}
   body {
   	font-family: 'Roboto Condensed', sans-serif;
   }
