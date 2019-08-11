@@ -8,19 +8,19 @@ import HeaderStyle from './HeaderStyle';
 const displayName = 'Header';
 
 const propTypes = {
-  headerItem: PropTypes.elementType,
+  HeaderItem: PropTypes.elementType,
   pageTitle: PropTypes.string.isRequired
 };
 
 const defaultProps = {
-  headerItem: null
+  HeaderItem: null
 };
 
-export default function Header({ headerItem, pageTitle }) {
+export default function Header({ HeaderItem, pageTitle }) {
   return (
     <HeaderStyle>
       <Grid wrap={false} valign="stretch">
-        <Grid.Unit size={0.35}>{headerItem}</Grid.Unit>
+        <Grid.Unit size={0.35}>{HeaderItem}</Grid.Unit>
         <Grid.Unit size={0.35}>
           <HeaderText>{pageTitle}</HeaderText>
         </Grid.Unit>

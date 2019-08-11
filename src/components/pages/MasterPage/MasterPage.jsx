@@ -9,20 +9,20 @@ const displayName = 'MasterPage';
 
 const propTypes = {
   children: PropTypes.element.isRequired,
-  headerItem: PropTypes.shape(),
+  HeaderItem: PropTypes.elementType,
   pageTitle: PropTypes.string,
   isLogged: PropTypes.bool.isRequired
 };
 
 const defaultProps = {
-  headerItem: null,
+  HeaderItem: React.Fragment,
   pageTitle: 'Onseo'
 };
 
-export default function MasterPage({ children, headerItem, pageTitle, isLogged }) {
+export default function MasterPage({ children, HeaderItem, pageTitle, isLogged }) {
   return (
     <MasterPageStyle>
-      <Header headerItem={headerItem} pageTitle={pageTitle} />
+      <Header headerItem={HeaderItem} pageTitle={pageTitle} />
       {children}
       {isLogged ? <div>Here will be NavBar</div> : <Copyright />}
     </MasterPageStyle>
