@@ -11,12 +11,13 @@ const propTypes = {
   children: PropTypes.element.isRequired,
   HeaderItem: PropTypes.elementType,
   pageTitle: PropTypes.string,
-  isLogged: PropTypes.bool.isRequired
+  isLogged: PropTypes.bool
 };
 
 const defaultProps = {
   HeaderItem: React.Fragment,
-  pageTitle: 'Onseo'
+  pageTitle: 'Onseo',
+  isLogged: false
 };
 
 export default function MasterPage({ children, HeaderItem, pageTitle, isLogged }) {
