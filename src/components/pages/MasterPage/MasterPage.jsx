@@ -11,21 +11,21 @@ const propTypes = {
   children: PropTypes.element.isRequired,
   HeaderItem: PropTypes.elementType,
   pageTitle: PropTypes.string,
-  isLogged: PropTypes.bool
+  isLoggedIn: PropTypes.bool
 };
 
 const defaultProps = {
   HeaderItem: React.Fragment,
   pageTitle: 'Onseo',
-  isLogged: false
+  isLoggedIn: false
 };
 
-export default function MasterPage({ children, HeaderItem, pageTitle, isLogged }) {
+export default function MasterPage({ children, HeaderItem, pageTitle, isLoggedIn }) {
   return (
     <MasterPageStyle>
       <Header headerItem={HeaderItem} pageTitle={pageTitle} />
       {children}
-      {isLogged ? <div>Here will be NavBar</div> : <Copyright />}
+      {isLoggedIn ? <div>Here will be NavBar</div> : <Copyright />}
     </MasterPageStyle>
   );
 }
