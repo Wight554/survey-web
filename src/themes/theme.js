@@ -10,8 +10,12 @@ const theme = {
   color9: '#2E7D32',
   color10: '#EF5350',
   color11: '#C62828',
-  padding1: '10px',
-  padding2: '5px',
-  padding3: '2px'
+  padding1: 10,
+  padding2: 5,
+  padding3: 2,
+  fontSize1: '24px',
+  fontSize2: '18px',
+  fontSize3: '14px',
+  fontSize4: '12px'
 };
 export default theme;

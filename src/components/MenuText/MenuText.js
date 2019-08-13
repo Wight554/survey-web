@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const MenuText = styled.span`
-  font-size: 12px;
+  font-size: ${props => props.theme.fontSize4};
   color: ${props => props.theme.color4};
 `;
 
