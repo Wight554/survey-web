@@ -25,7 +25,7 @@ export default function InputContainer({ label, type, input, meta: { touched, er
       <label htmlFor={input.name}>
         <LabelText>{label}</LabelText>
       </label>
-      <Input {...input} type={type} />
+      <Input {...input} type={type} placeholder={label} />
       {touched && error && <ErrorText>{error}</ErrorText>}
     </InputContainerStyle>
   );
