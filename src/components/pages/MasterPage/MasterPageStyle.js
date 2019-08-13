@@ -10,7 +10,7 @@ const MasterPageStyle = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  & * {
+  > * {
     padding: ${props => props.theme.padding1}px;
   }
 `;
