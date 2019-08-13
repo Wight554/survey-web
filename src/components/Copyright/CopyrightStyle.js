@@ -6,7 +6,7 @@ const CopyrightStyle = styled.div`
   border-top: 1px solid ${props => props.theme.color5};
   height: 50px;
   text-align: center;
-  & * {
+  & > * {
     padding: ${props => props.theme.padding2}px;
     line-height: ${props => 50 - props.theme.padding1 * 2}px;
   }
