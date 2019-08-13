@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { reduxForm, Field } from 'redux-form/immutable';
 
 import Form from '../Form';
@@ -7,7 +8,9 @@ import InputContainer from '../InputContainer';
 
 const displayName = 'LoginForm';
 
-const handleLogin = () => {}; // TODO: do smth
+const propTypes = {
+  handleSubmit: PropTypes.func.isRequired
+};
 
 const validate = values => {
   const errors = {};
@@ -20,9 +23,9 @@ const validate = values => {
   return errors;
 };
 
-const LoginForm = () => {
+const LoginForm = ({ handleSubmit }) => {
   return (
-    <Form onSubmit={handleLogin}>
+    <Form onSubmit={handleSubmit}>
       <Field name="username" type="text" component={InputContainer} label="Username" />
       <Field name="password" type="password" component={InputContainer} label="Password" />
       <button type="submit">Login</button>
@@ -36,3 +39,4 @@ export default reduxForm({
 })(LoginForm);
 
 LoginForm.displayName = displayName;
+LoginForm.propTypes = propTypes;

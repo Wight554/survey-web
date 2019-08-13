@@ -8,16 +8,15 @@ const displayName = 'RegisterForm';
 
 const propTypes = {
   page: PropTypes.number.isRequired,
-  nextPage: PropTypes.func.isRequired
+  nextPage: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired
 };
 
-const handleRegister = () => {}; // TODO: do smth
-
-const RegisterForm = ({ page, nextPage }) => {
+const RegisterForm = ({ page, nextPage, handleSubmit }) => {
   return (
     <>
       {page === 1 && <RegisterFormFirstPage onSubmit={nextPage} />}
-      {page === 2 && <RegisterFormSecondPage onSubmit={handleRegister} />}
+      {page === 2 && <RegisterFormSecondPage onSubmit={handleSubmit} />}
     </>
   );
 };

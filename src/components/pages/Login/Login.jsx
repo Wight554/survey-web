@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import LoginStyle from './LoginStyle';
@@ -8,11 +9,15 @@ import LabelText from '../../LabelText';
 
 const displayName = 'Login';
 
-export default function Login() {
+const propTypes = {
+  handleSubmit: PropTypes.func.isRequired
+};
+
+export default function Login({ handleSubmit }) {
   return (
     <MasterPage>
       <LoginStyle>
-        <LoginForm />
+        <LoginForm onSubmit={handleSubmit} />
         {/* TODO: handle this some day */}
         <Link to="/">forgot password?</Link>
         <LabelText>or</LabelText>
@@ -23,3 +28,4 @@ export default function Login() {
 }
 
 Login.displayName = displayName;
+Login.propTypes = propTypes;
